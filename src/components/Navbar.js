@@ -1,10 +1,14 @@
-import { Link } from "react-router-dom";
+import { useNavigate ,Link } from "react-router-dom";
 import React from 'react';
 
 const Navbar = ({searchText,setSearchText}) => {
+const Navigate = useNavigate();
 
  const updateSearchText = (e) => {
-    console.log(e.target.value)
+    Navigate('/search')
+    setSearchText(e.target.value)
+    
+    
  }   
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
